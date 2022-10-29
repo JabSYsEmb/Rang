@@ -1,0 +1,41 @@
+\hypertarget{classRang_1_1RangBase}{}\doxysection{Rang\+::Rang\+Base Class Reference}
+\label{classRang_1_1RangBase}\index{Rang::RangBase@{Rang::RangBase}}
+
+
+The base class for the Rang programming language.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRang_1_1RangBase_a6f996ec313512a63b3038eb04d15ae10}\label{classRang_1_1RangBase_a6f996ec313512a63b3038eb04d15ae10}} 
+{\bfseries Rang\+Base} ()
+\begin{DoxyCompactList}\small\item\em The constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The base class for the Rang programming language. 
+
+Rang program. It may be considered in three parts\+:
+
+
+\begin{DoxyEnumerate}
+\item It acts as an extendable interface through which additional \char`\"{}library\char`\"{}
+
+functions can be added to the language.
+
+It is intentionally designed that each instance of \mbox{\hyperlink{classRang_1_1RangBase}{Rang\+Base}} will have
+
+its own library functions.
+\item It provides methods to compile scripts and templates, resulting
+
+program object.
+\item The Program object may then be executed, providing
+
+instance-\/specific context information ({\itshape i.\+e}, state). 
+\end{DoxyEnumerate}
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/rang\+Base.\+hpp\item 
+src/rang\+Base.\+cpp\end{DoxyCompactItemize}
