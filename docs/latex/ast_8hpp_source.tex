@@ -1,0 +1,27 @@
+\hypertarget{ast_8hpp_source}{}\doxysection{ast.\+hpp}
+\label{ast_8hpp_source}\index{include/ast.hpp@{include/ast.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}location.hh"{}}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{keyword}{namespace }Rang \{}
+\DoxyCodeLine{6   \textcolor{keyword}{class }\mbox{\hyperlink{classRang_1_1AstNode}{AstNode}} \{}
+\DoxyCodeLine{7     \textcolor{keyword}{public}:}
+\DoxyCodeLine{8       \mbox{\hyperlink{classRang_1_1AstNode}{AstNode}}(Rang::location loc) : location(loc) \{\};}
+\DoxyCodeLine{9       \textcolor{keyword}{virtual} std::string inspect(); }
+\DoxyCodeLine{10     \textcolor{keyword}{private}:}
+\DoxyCodeLine{11       Rang::location location;}
+\DoxyCodeLine{12   \};}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14   \textcolor{keyword}{class }\mbox{\hyperlink{classRang_1_1AstNodeInteger}{AstNodeInteger}} : \textcolor{keyword}{public} \mbox{\hyperlink{classRang_1_1AstNode}{AstNode}} \{}
+\DoxyCodeLine{15     \textcolor{keyword}{public}:}
+\DoxyCodeLine{16       \mbox{\hyperlink{classRang_1_1AstNodeInteger}{AstNodeInteger}}(uint64\_t number, Rang::location loc) : \mbox{\hyperlink{classRang_1_1AstNode}{AstNode}}(loc), val(number) \{\};}
+\DoxyCodeLine{17       \textcolor{keyword}{virtual} std::string inspect() \textcolor{keyword}{override};}
+\DoxyCodeLine{18     \textcolor{keyword}{private}:}
+\DoxyCodeLine{19       uint64\_t val;}
+\DoxyCodeLine{20   \};}
+\DoxyCodeLine{21 \}}
+
+\end{DoxyCode}
