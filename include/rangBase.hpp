@@ -51,7 +51,6 @@ namespace Rang {
 		/**
 		 * The constructor.
 		 *
-		 *
 		 */
 		public:
 			RangBase();
