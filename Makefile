@@ -36,15 +36,16 @@ clean: ## Remove all contents of the build directories.
 cloc: ## Count the lines of code used in the project.
 	cloc src include flex bison test Makefile
 
-watch: ## build and wait for changes
-	@while true; do												  						\
-		fswatch -o $(LIBOBJECTS) -o $(INCLUDE) | make all;\
-		echo "\033[0;32m";	  							  					  \
-		echo "############################";  					  \
-		echo "# Waiting for changes...   #";  					  \
-		echo "############################";  					  \
-		echo "\033[0m";	 										  					  \
-		done;
+watch:
+	@while true; do\
+		make all; \
+		echo "\033[0;32m";\
+		echo "###########################";\
+		echo "### Waiting for changes ###";\
+		echo "###########################";\
+		echo "\033[0m";\
+		fswatch -1 -r $(LIBOBJECTS) $(INCLUDE) >/dev/null 2>&1;\
+		done
 
 help: ## Display this help
 	@grep -E '^[ a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "%-30s %s\n", $$1, $$2}'
